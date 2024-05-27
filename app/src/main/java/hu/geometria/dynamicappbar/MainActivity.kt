@@ -9,14 +9,11 @@ import androidx.compose.runtime.LaunchedEffect
 import androidx.compose.runtime.getValue
 import androidx.compose.runtime.mutableStateOf
 import androidx.compose.runtime.remember
-import androidx.compose.runtime.rememberCoroutineScope
 import androidx.compose.runtime.setValue
-import androidx.compose.runtime.withFrameNanos
-import hu.geometria.dynamicappbar.ui.screens.AppNavigation
-import hu.geometria.dynamicappbar.ui.screens.LoadingScreen
+import hu.geometria.dynamicappbar.ui.views.AppNavigation
+import hu.geometria.dynamicappbar.ui.views.LoadingScreen
 import hu.geometria.dynamicappbar.ui.theme.DynamicAppbarTheme
 import kotlinx.coroutines.delay
-import kotlinx.coroutines.launch
 
 
 class MainActivity : ComponentActivity() {

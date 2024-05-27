@@ -1,4 +1,4 @@
-package hu.geometria.dynamicappbar.ui.screens
+package hu.geometria.dynamicappbar.ui.views
 
 import androidx.compose.foundation.background
 import androidx.compose.foundation.layout.Arrangement

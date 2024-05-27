@@ -1,24 +1,25 @@
-package hu.geometria.dynamicappbar.ui.screens
+package hu.geometria.dynamicappbar.ui.views
 
 import android.annotation.SuppressLint
 import androidx.compose.foundation.layout.Column
 import androidx.compose.foundation.layout.padding
+import androidx.compose.material3.Button
 import androidx.compose.material3.Scaffold
 import androidx.compose.material3.Text
 import androidx.compose.runtime.Composable
 import androidx.compose.ui.Modifier
+import androidx.compose.ui.graphics.Color
 import androidx.compose.ui.unit.dp
 import androidx.navigation.NavController
 import hu.geometria.dynamicappbar.ui.DynamicTopAppBar
 
 @Composable
-@SuppressLint("UnusedMaterial3ScaffoldPaddingParameter") //Scaffold's paddingValues really wants to be used.
-fun MunkaListaScreen(navController: NavController) {
+fun TestView(navController: NavController){
     Scaffold(
-        topBar = { DynamicTopAppBar(navController,) }
+        topBar = { DynamicTopAppBar(navController) }
     ) {
-        Column(modifier = Modifier.padding(16.dp)) {
-            Text(text = "MunkaListaScreen")
+        Column(modifier = Modifier.padding(it)) {
+            Text(text = "This is TEST View")
         }
     }
 }

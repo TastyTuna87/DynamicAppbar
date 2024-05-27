@@ -17,7 +17,7 @@ import androidx.compose.runtime.remember
 import androidx.compose.runtime.setValue
 import androidx.compose.ui.Modifier
 import androidx.navigation.NavController
-import hu.geometria.dynamicappbar.dataclasses.Screen
+import hu.geometria.dynamicappbar.dataclasses.NavItem
 
 
 @Composable
@@ -43,11 +43,11 @@ fun HamburgerMenuButton(
                 expanded = isExpanded, onDismissRequest = { isExpanded = false },
                 modifier = Modifier.background(MaterialTheme.colorScheme.onPrimary)
             ) {
-                Screen.MenuItems.items.forEach { screen ->
+                NavItem.MenuItems.items.forEach { item ->
                     DropdownMenuItem(
-                        text = { Text(screen.title) },
-                        onClick = {
-                            navController.navigate(screen.route)
+                        text = { Text(item.title) },
+                        onClick = item.action ?: {
+                            navController.navigate(item.route)
                             isExpanded = false
                         }
                     )
